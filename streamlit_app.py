@@ -81,6 +81,7 @@ df = cluster_foods(df)
 page = st.sidebar.selectbox("Select Page", ["Nutrition Recommendation", "Chatbot"])
 
 if page == "Nutrition Recommendation":
+
     st.title("🍽️ SmartNutriPlan - AI Powered Nutrition App")
 
     # 🔍 Disease Based Recommendation
@@ -114,22 +115,9 @@ if page == "Nutrition Recommendation":
         similar = get_similar_foods(df, food_input)
         st.write(similar)
 
-# elif page == "Chatbot":
-#     st.title("🤖 Nutrition Chatbot")
-#     user_question = st.text_input("Ask your nutrition question:")
-#     if st.button("Ask"):
-#         # You can adjust the context or make it dynamic
-#         context = f"Nutrition dataset sample:\n{df.head(10).to_string()}\n"
-#         prompt = context + "\nUser question: " + user_question + "\nAnswer:"
-#         response = together.Complete.create(
-#             model="mistralai/Mixtral-8x7B-Instruct-v0.1",
-#             prompt=prompt,
-#             max_tokens=150,
-#             temperature=0.7,
-#         )
-#         answer = response['output']['choices'][0]['text'].strip()
-#         st.write("💬", answer)
-    elif page == "Chatbot":
+
+elif page == "Chatbot":
+        
         st.title("🤖 Nutrition Chatbot")
         user_question = st.text_input("Ask your nutrition question:")
 
@@ -157,3 +145,23 @@ if page == "Nutrition Recommendation":
                 answer = "⚠️ Response parsing error. Please try again."
 
             st.write("💬", answer)
+
+
+
+
+# elif page == "Chatbot":
+#     st.title("🤖 Nutrition Chatbot")
+#     user_question = st.text_input("Ask your nutrition question:")
+#     if st.button("Ask"):
+#         # You can adjust the context or make it dynamic
+#         context = f"Nutrition dataset sample:\n{df.head(10).to_string()}\n"
+#         prompt = context + "\nUser question: " + user_question + "\nAnswer:"
+#         response = together.Complete.create(
+#             model="mistralai/Mixtral-8x7B-Instruct-v0.1",
+#             prompt=prompt,
+#             max_tokens=150,
+#             temperature=0.7,
+#         )
+#         answer = response['output']['choices'][0]['text'].strip()
+#         st.write("💬", answer)
+    
