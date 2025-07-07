@@ -136,12 +136,12 @@ elif page == "Chatbot":
                 temperature=0.7,
             )
 
-            # রেসপন্স থেকে টেক্সট বের করার চেষ্টা
+            
             try:
-                # যদি Together API এর রেসপন্স dict আকারে হয়:
+                
                 answer = response['output']['choices'][0]['text'].strip()
             except (KeyError, IndexError, TypeError):
-                # যদি পার্সিংয়ে সমস্যা হয় তাহলে এরর মেসেজ দেখাবে
+                
                 answer = "⚠️ Response parsing error. Please try again."
 
             st.write("💬", answer)
