@@ -4,3 +4,4 @@ scikit-learn
 openpyxl
 requests
 together
+python-dotenv
