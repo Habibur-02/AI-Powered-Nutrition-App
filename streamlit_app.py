@@ -330,7 +330,7 @@ elif page == "Chatbot":
         """
         
         try:
-            # Initialize the Gemini model - ONLY CHANGED THIS LINE
+            
             model = genai.GenerativeModel('gemini-1.0-pro')  # Changed from 'gemini-pro'
             
           
