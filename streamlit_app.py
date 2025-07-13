@@ -342,7 +342,7 @@ elif page == "Chatbot":
                 )
             )
             
-            # Display the answer
+            
             st.write("💬", response.text)
             
         except Exception as e:
