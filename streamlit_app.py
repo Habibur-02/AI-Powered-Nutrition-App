@@ -333,7 +333,7 @@ elif page == "Chatbot":
             # Initialize the Gemini model - ONLY CHANGED THIS LINE
             model = genai.GenerativeModel('gemini-1.0-pro')  # Changed from 'gemini-pro'
             
-            # Generate response - ONLY CHANGED THE CONFIG FORMAT
+          
             response = model.generate_content(
                 f"{context}\n\nQuestion: {user_question}",
                 generation_config=genai.types.GenerationConfig(
