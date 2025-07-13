@@ -331,7 +331,7 @@ elif page == "Chatbot":
         
         try:
             
-            model = genai.GenerativeModel('gemini-1.0-pro')  # Changed from 'gemini-pro'
+            model = genai.GenerativeModel('gemini-1.0-pro')  
             
           
             response = model.generate_content(
