@@ -51,7 +51,7 @@ if page == "Nutrition Recommendation":
         st.write(plan)
 
     #  Similar Foods
-    st.header("🤝 Similar Foods (KMeans Clustering)")
+    st.header("🤝 Similar Foods")
     food_input = st.text_input("Enter food name (example: almond)")
     if st.button("Find Similar Foods"):
         similar = get_similar_foods(df, food_input)
