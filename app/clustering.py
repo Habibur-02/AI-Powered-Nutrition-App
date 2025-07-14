@@ -1,7 +1,7 @@
 from sklearn.cluster import KMeans
 
 def cluster_foods(df, n_clusters=6):
-    # শুধু numeric column গুলো বাছাই করা
+    
     nutrient_cols = df.select_dtypes(include=['number']).columns.tolist()
     X = df[nutrient_cols]
 
