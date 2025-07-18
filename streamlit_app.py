@@ -95,3 +95,5 @@ elif page == "Chatbot":
         except Exception as e:
             st.error(f"⚠️ Error getting response: {str(e)}")
             st.info("Note: Gemini has a free tier but may have rate limits")
+
+
